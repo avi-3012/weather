@@ -48,6 +48,10 @@ const Forecast = () => {
       <div className="forecast">
         <div style={{ display: "flex", flexDirection: "row" }}>
           <div className="forecast__day1">
+            <h3 style={{ fontSize: "16px" }}>{date[0]}</h3>
+            <p style={{ fontSize: "30px" }}>{temp[0]}°</p>
+          </div>
+          <div className="forecast__day1">
             <h3 style={{ fontSize: "16px" }}>{date[1]}</h3>
             <p style={{ fontSize: "30px" }}>{temp[1]}°</p>
           </div>
@@ -59,13 +63,9 @@ const Forecast = () => {
             <h3 style={{ fontSize: "16px" }}>{date[3]}</h3>
             <p style={{ fontSize: "30px" }}>{temp[3]}°</p>
           </div>
-          <div className="forecast__day1">
+          <div className="forecast__day2">
             <h3 style={{ fontSize: "16px" }}>{date[4]}</h3>
             <p style={{ fontSize: "30px" }}>{temp[4]}°</p>
-          </div>
-          <div className="forecast__day2">
-            <h3 style={{ fontSize: "16px" }}>{date[5]}</h3>
-            <p style={{ fontSize: "30px" }}>{temp[5]}°</p>
           </div>
         </div>
       </div>
