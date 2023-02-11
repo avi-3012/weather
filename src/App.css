@@ -305,8 +305,6 @@ li {
 
 /* -- RESPONSIVENESS -- */
 
-/* Width Responsiveness */
-
 @media (max-width: 1040px) {
   .forecast {
     width: 530px;
@@ -448,8 +446,6 @@ li {
     z-index: 1;
   }
 }
-
-/* Height Responsiveness */
 
 @media (max-height: 550px) {
   .sidebar ul li {
