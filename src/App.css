@@ -76,7 +76,7 @@ li {
   display: flex;
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 180px;
   margin-bottom: 3rem;
   margin-left: 3rem;
   color: #fff;
@@ -143,7 +143,7 @@ li {
 
 /* Overlay */
 .sidebar::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -266,11 +266,67 @@ li {
   padding: 15px 0;
 }
 
+.forecast {
+  position: absolute;
+  bottom: -130px;
+  left: 0px;
+  display: flex;
+  /* width: 100%; */
+  box-sizing: border-box;
+  height: 100px;
+  overflow-x: scroll;
+}
+
+.forecast__day1 {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 20px;
+  padding-right: 20px;
+  height: 100px;
+  width: 110px;
+  border-right: 1px solid #fff;
+  color: white;
+  box-sizing: border-box;
+}
+.forecast__day2 {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 20px;
+  padding-right: 20px;
+  height: 100px;
+  width: 110px;
+  color: white;
+  box-sizing: border-box;
+}
+
 /* -- RESPONSIVENESS -- */
 
 /* Width Responsiveness */
 
-@media (max-width: 930px) {
+@media (max-width: 1040px) {
+  .forecast {
+    width: 530px;
+    box-sizing: border-box;
+    height: 100px;
+    overflow-x: scroll;
+  }
+  .forecast__day1 {
+    height: 100px;
+    width: 110px;
+    box-sizing: border-box;
+  }
+  .forecast__day2 {
+    height: 100px;
+    width: 110px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 1000px) {
   .left-info {
     margin-left: 1.5rem;
     flex-direction: column;
@@ -281,7 +337,20 @@ li {
   }
 
   .left-info h1 {
+    margin-top: 100px;
     font-size: 5rem;
+  }
+  .forecast {
+    position: initial;
+    width: 400px;
+    overflow-x: scroll;
+  }
+  .forecast2 {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
   }
 }
 
@@ -289,8 +358,8 @@ li {
 
 @media (max-width: 650px) {
   body {
-    background: url('https://images.pexels.com/photos/1631678/pexels-photo-1631678.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260') no-repeat center
-      center/cover;
+    background: url("https://images.pexels.com/photos/1631678/pexels-photo-1631678.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")
+      no-repeat center center/cover;
   }
   .left-info {
     width: 100%;
@@ -301,10 +370,11 @@ li {
 
   .left-info h1 {
     font-size: 4rem;
+    margin-top: 10px;
   }
 
   .left-info .location-info {
-    padding: 20px;
+    padding: 10px;
   }
 
   .left-info .location-info h3 {
@@ -363,6 +433,19 @@ li {
 
   .sidebar .status-list {
     text-shadow: 1px 1px 5px #333;
+  }
+  .forecast {
+    position: initial;
+    width: 400px;
+    overflow-x: scroll;
+  }
+  .forecast2 {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    margin-top: 0px;
+    z-index: 1;
   }
 }
 
