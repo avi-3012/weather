@@ -1,17 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { WeatherProvider } from '../src/context';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { WeatherProvider } from "../src/context";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <WeatherProvider>
-      <App />
-    </WeatherProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
+  <WeatherProvider>
+    <App />
+  </WeatherProvider>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
