@@ -13,30 +13,18 @@ const Background = () => {
 
   // If: Width <= 650px is phone width in css
   if (window.innerWidth <= 650) {
-    if (
-      weatherCondition === "Clear" ||
-      weatherCondition === "Clouds" ||
-      weatherCondition === "Smoke"
-    ) {
-      documentBody.style.background = `url(${phoneWarm}) no-repeat center center/cover`;
-    }
-
     if (weatherCondition === "Rain" || weatherCondition === "Mist") {
       documentBody.style.background = `url(${phoneRainy}) no-repeat center center/cover`;
+    } else {
+      documentBody.style.background = `url(${phoneWarm}) no-repeat center center/cover`;
     }
   }
   // Else: Width >= 650px
   else {
-    if (
-      weatherCondition === "Clear" ||
-      weatherCondition === "Clouds" ||
-      weatherCondition === "Smoke"
-    ) {
-      documentBody.style.background = `url(${mainClear}) no-repeat center center/cover`;
-    }
-
     if (weatherCondition === "Rain" || weatherCondition === "Mist") {
       documentBody.style.background = `url(${mainRainy}) no-repeat center center/cover`;
+    } else {
+      documentBody.style.background = `url(${mainClear}) no-repeat center center/cover`;
     }
   }
 
